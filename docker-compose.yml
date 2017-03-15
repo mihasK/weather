@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+   scrapy:
+      build: .
+      #image: aciobanu/scrapy
+      #user: "$(id -u)"
+      ports:
+         - "8888:8888"
+      working_dir: /work
+      volumes:
+         - ./:/work
+#      command: python
